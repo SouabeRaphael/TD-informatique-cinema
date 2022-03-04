@@ -1,3 +1,6 @@
+
+<?php include_once($_SERVER['DOCUMENT_ROOT']."\TP-site-informatique-cinema\\function.php");?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,6 +10,7 @@
     <title>Site-informatique-cinéma</title>
 </head>
 <body>
+    <p>coucouy</p>
     
 </body>
 </html>
