@@ -10,7 +10,9 @@
     <title>Site-informatique-cinéma</title>
 </head>
 <body>
-    <p>coucouy</p>
+    <div class="content-wrapper">
+        <?php require_once './composant.php';?>
+    </div>
     
 </body>
 </html>
