@@ -1,0 +1,392 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: black;
+  background-color: #4d5057;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Design Header */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: height 0.2s ease-in-out;
+  margin: 0;
+}
+
+.header.scroll {
+  height: 120px;
+  transition: height 0.2s ease;
+  background-color: rgb(0, 0, 0, 0.8);
+  border: none;
+}
+
+.content-header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 100px;
+}
+
+.logo:hover {
+  color: white;
+}
+
+.item-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-burger {
+  font-size: 30px;
+  color: white;
+  margin-left: 60px;
+}
+.menu-burger:hover {
+  color: white;
+}
+
+
+/* Bar de recherche */
+.search-box {
+  position: relative;
+  display: flex;
+}
+
+.input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color: #fff;
+}
+.input-search::placeholder {
+  color: rgba(255, 255, 255);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+
+.btn-submit {
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+  transform: translateX(-35px);
+  display: none;
+}
+
+.input-search.open {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.btn-search.hidden {
+  display: none;
+}
+
+.btn-submit.show{
+    display: block;
+}
+
+/* ------------------------------------------ */
+/* Page des films les plus populaire */
+
+.bg-tilte {
+  position: fixed;
+  font-size: 400px;
+  font-weight: bold;
+  z-index: -1;
+  opacity: 10%;
+  top: 30vh;
+  left: 5vw;
+  color: #fefefe;
+}
+.content-wrapper {
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-popular {
+  position: relative;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.container-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 20px;
+}
+
+.item-movies {
+  width: 350px;
+  height: auto;
+  position: relative;
+}
+
+.bande-title {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 86%;
+}
+
+.title-movie {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.img {
+  height: 60vh;
+}
+.item-movies:hover .img {
+  filter: blur(5px);
+}
+
+.overview {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.container-btn-detail {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  visibility: hidden;
+}
+.item-movies:hover .container-btn-detail {
+  visibility: visible;
+}
+
+.btn-detail {
+  border: none;
+  padding: 10px 25px;
+  background-color: #22a6b3;
+}
+
+.link-btn-detail {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.link-btn-detail:hover {
+  color: white;
+}
+
+.btn-pagination {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-btn-page {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.btn-page {
+  padding: 8px 40px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 15px 0 15px 0;
+}
+
+.link-btn-page {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.link-btn-page:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+/* Page de detail du films */
+
+.content-details {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.first-page {
+  width: 100%;
+  height: 100vh;
+}
+
+.info-movie {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.3);
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0, 0.6),
+    rgb(0, 0, 0, 0.2)
+  );
+}
+
+.content-movie-detail {
+  position: relative;
+  top: 50%;
+  width: auto;
+  height: auto;
+}
+
+.info-movie-detail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.5rem;
+  padding-top: 40px;
+  padding-left: 80px;
+}
+
+.info-movie-detail b {
+  color: white;
+  font-size: 17px;
+}
+.info-movie-detail b span {
+  color: grey;
+}
+
+.title-movie-details {
+  width: 100%;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.container-genre {
+  width: 100%;
+  height: auto;
+  padding-left: 80px;
+  margin-top: 20px;
+}
+
+.genre {
+  display: inline-block;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding: 5px 15px;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.separator {
+  width: 10%;
+  height: 2px;
+  background-color: red;
+  margin: 20px 80px;
+}
+
+.synop {
+  margin-left: 80px;
+  width: 60%;
+  color: white;
+  margin-top: 50px;
+}
